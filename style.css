@@ -1,0 +1,42 @@
+p {
+	margin: 0;
+}
+
+#main_image {
+	width: 400px;
+	height: 200px;
+	margin: 1% auto 0 auto;
+	background: url('https://i.imgur.com/OujjFJP.png');
+}
+
+#countdown {
+	font-family: 'Inconsolata', monospace;
+	font-size: 2em;
+}
+
+#timer {
+	width: 80%;
+	margin: 0 auto 0 auto;	
+	text-align: center;
+	color: #1D1D1D;
+}
+
+#headline {
+	color: #1D1D1D;
+	font-family: 'Cairo', sans-serif;
+	font-size: 2.5em;
+	text-align: center;
+	width: 80%;	
+	margin: 0 auto 0 auto;	
+}
+
+#days_left {
+	font-family: 'Inconsolata', monospace;
+	font-size: 3em;
+	color: #FF5252;
+	margin: 0 auto 0 auto;
+}
+
+.end_date {
+	color: #1D1D1D;
+}
