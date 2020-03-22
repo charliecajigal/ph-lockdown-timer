@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 		<body>
+			<div id="server_time"></div>
 			<div id="main_image">&nbsp;</div>
 			<div id="headline">End of PH lockdown<p class="end_date">April 15, 2020</p><p id="days_left"></p></div>
 			<div id="timer">
@@ -17,7 +18,8 @@
 
 				<script>
 					// Set the date we're counting down to			
-					var countDownDate = new Date("April 15, 2020 00:00:00").getTime();
+					var countDownDate = new Date("April 15, 2020 00:00:00").getTime();	
+									
 
 					// Update the count down every 1 second
 					var x = setInterval(function() {
@@ -37,13 +39,41 @@
 					  // Display the result in the element with id="countdown"
 					  document.getElementById("countdown").innerHTML = hours + "h "
 					  + minutes + "m " + seconds + "s ";
-					  document.getElementById("days_left").innerHTML = days + "days";
+					  document.getElementById("days_left").innerHTML = days + "days";					  
 
 					  // If the count down is finished, write some text
 					  if (duration < 0) {
 						clearInterval(x);
 						document.getElementById("countdown").innerHTML = "EXPIRED";
 					  }
+					}, 1000);
+					
+					var y = setInterval(function() {
+						// Set month names
+						var monthNames = ["January", "February", "March", "April", "May", "June",
+						  "July", "August", "September", "October", "November", "December"
+						];
+					
+						// Get today's date unformatted
+						var today = new Date();	
+						
+						// Get current month
+						var month = today.getMonth();
+						
+						// Get current day
+						var day = today.getDate();
+						
+						// Get current year
+						var year = today.getFullYear();
+						
+						// Format time
+						var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+						
+						// Format date
+						var currentDate = monthNames[month] + " " + day + ", " + year;
+						
+						// Display result
+						document.getElementById("server_time").innerHTML = "server date: " + currentDate + " // " + time;						
 					}, 1000);
 				</script>
 			</div>			

@@ -21,6 +21,14 @@ p {
 	color: #1D1D1D;
 }
 
+#server_time {
+	font-family: 'Inconsolata', monospace;
+	width: 80%;
+	margin: 0 auto 0 auto;	
+	text-align: center;	
+	color: #1D1D1D;
+}
+
 #headline {
 	color: #1D1D1D;
 	font-family: 'Cairo', sans-serif;
